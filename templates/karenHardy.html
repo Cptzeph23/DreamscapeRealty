@@ -1,0 +1,141 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+     <!-- Real Estate 2 Section -->
+    <section id="real-estate-2" class="real-estate-2 section">
+        <div class="mt-3 mb-5">
+            <h1 class="text-center">Property Details</h1>
+            <p class="text-center ">This is the detailed description of the property you have selected</p>
+        </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+               <img src="{% static 'assets/img/properties/property-1.jpg' %}" alt="" class="img-fluid">
+            </div>
+
+            <div class="swiper-slide">
+               <img src="{% static 'assets/img/properties/property-1.jpg' %}" alt="" class="img-fluid">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="{% static 'assets/img/properties/property-1.jpg' %}" alt="" class="img-fluid">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+
+            <div class="portfolio-description">
+              <h2>Description</h2>
+              <p>
+                This is a four-bedroom house with a well maintained lawn and compound offering a seren atmosphere for relaxation and fresh air.<br>
+                  The house comes with a modern style furniture architecture that gives you comfort as you seat and a few of the couches giving you relaxing massage.
+              </p>
+              <p>In The interior, The house is designed with one master bedroom with luxurious bed, closes, tv stand and a well-placed air conditioner. it has its own spacious washroom and balcony that gives you a wide view of the city and coll refreshing breeze
+              </p>
+
+              <p>
+                It has also  three other bedrooms designed for children and guests. The rooms are spacious enough each with it's ow washroom, closet and sizeable beds.
+                  The walls are painted puple, but you could change to your preferred color.
+              </p>
+
+              <p>
+                The house has a well spaced kitchen with cooking apparatus such as microwave, gas cookers and adjustable table to fit your as you prepare meals. It also has a tv screen to keep you entertained as you prepare dishes.<br>
+                  With a round opeenning to the dinning room, the kitchen is centrally placed to enable efficient transition of food from the kitchen to the dinning room
+              </p>
+
+              <div class="testimonial-item">
+                <p>
+                  <span>The House has staright corridor that leads from the main sitting room to the backyard where you get a vew of a magnificent compound and floor garden<br>
+                  The lighting system of the house is breathtaking with British-style lighting architecture that prevents the house from having shadows but illuminates the entire room</span>
+                </p>
+                <div>
+                  <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Imani Faith</h3>
+                  <h4>Agent</h4>
+                </div>
+              </div>
+            </div><!-- End Portfolio Description -->
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#real-estate-2-tab1">Video</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#real-estate-2-tab2">Floor Plans</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#real-estate-2-tab3">Location</a></li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+              <div class="tab-pane fade show active" id="real-estate-2-tab1">
+
+              </div><!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade" id="real-estate-2-tab2">
+                <img src="{% static 'assets/img/floor-plan.jpg' %}" alt="" class="img-fluid">
+              </div><!-- End Tab 2 Content -->
+
+              <div class="tab-pane fade" id="real-estate-2-tab3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7977.815499448671!2d36.82698183564429!3d-1.2241260686212414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1732915568007!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div><!-- End Tab 3 Content -->
+
+            </div><!-- End Tab Content -->
+
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Quick Summary</h3>
+              <ul>
+                <li><strong>Property ID:</strong> 1134n</li>
+                <li><strong>Location:</strong> Evergreen, Runda</li>
+                <li><strong>Property Type:</strong> House</li>
+                <li><strong>Status:</strong> Sale</li>
+                <li><strong>Price:</strong> Ksh. 12.3M</li>
+                <li><strong>Area:</strong> <span>450m <sup>2</sup></span></li>
+                <li><strong>Beds:</strong> 4</li>
+                <li><strong>Baths:</strong> 2</li>
+                  <a href="{% url 'pay' %}" class="btn btn-success">Make payment</a>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Real Estate 2 Section -->
+
+
+
+{% endblock %}

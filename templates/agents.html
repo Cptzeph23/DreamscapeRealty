@@ -1,0 +1,76 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+
+
+
+    <!-- Agents Section -->
+    <section id="agents" class="agents section">
+           <div class="123 mb-5 mt-3">
+                <h1 class="text-center mt-5 mb-4 text-primary">Agents</h1>
+                <p class="text-center">These are some of the agents we have. Trusted and approved</p>
+           </div>
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/aget2.jpeg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4 class="text-success">Moses Muya</h4>
+                <span class="text-success-emphasis">Buyers' agent</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/aget1.jpeg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4 class="text-success">Esther Wairimu</h4>
+                <span class="text-success-emphasis">Sellers agentr</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/agent1.jpeg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4 class="text-success"class="text-success"class="text-success">Michael Kiplimo</h4>
+                <span class="text-success-emphasis">General agent<br></span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x "></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Agents Section -->
+
+
+{% endblock %}
+

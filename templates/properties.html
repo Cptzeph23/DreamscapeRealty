@@ -1,0 +1,182 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+     <!-- Real Estate Section -->
+    <section id="real-estate" class="real-estate section">
+        <div class="text-center  mt-3 mb-3">
+                  <h1 class="text-center mb-4 mt-1">Properties</h1>
+                  <p class="mb-5">Take a look at some of the best houses and apartments we have on display both for sale and rent.</p>
+
+              </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-1.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Ksh.85,000</span>
+                <h3><a href="{% url 'karenHardy' %}" class="stretched-link">Karen Hardy</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col">250m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-2.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Ksh.4.7M</span>
+                <h3><a href="{% url 'kilimani' %}" class="stretched-link">Kilimani Nairobi</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col">450m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">3</div>
+                    <div class="col">2</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-3.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Ksh.6.5M</span>
+                <h3><a href="{% url 'westlands' %}" class="stretched-link">Westlands</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col">500m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">3</div>
+                    <div class="col">2</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-4.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Ksh.120,000</span>
+                <h3><a href="{% url 'runda' %}" class="stretched-link">Runda</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">150m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-5.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Ksh.60,000</span>
+                <h3><a href="{% url 'kitsuru' %}" class="stretched-link">Kitsuru</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">180<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-6.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Ksh.4.0M</span>
+                <h3><a href="{% url 'kitengela' %}" class="stretched-link">Kitengela</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col">500<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Real Estate Section -->
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,166 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+      <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+          <div><h1 class="text-center mt-5 mb-4"><b>About Us</b></h1></div>
+
+        <div class="row gy-4">
+
+          <div class=" mt-5 col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>Unleashing Potential with Creative Strategy</h3>
+            <p class="fst-italic">
+              Are you selling or renting homes? We've got you covered.<br>Your Business has the potential to reach hundreds of customers within minutes. With Dreamscape Realty, we help push your homes
+                to greater heights of advertisement reaching many people at a go.<br>
+                Are you looking for a serene house/home? are you a family person who likes peaceful and quiet residence?<br>
+                If so, then Dreamscape Realty is your place. We connect you to the most trusted agents with houses and secure appartments
+                to make it your home.
+
+
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Decent homes with friendly neighborhood</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Pocket friendly buying or renting homes</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Enjoy the luxury and ambience atmosphere with Dreamscape realty</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6 mt-5">
+                <img src="{% static 'assets/img/about1.jpeg' %}" class="img-fluid" height="50px" alt="{% static 'assets/img/about2.jpeg' %}">
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12 mt-5">
+                    <img src="{% static 'assets/img/about5.jpeg' %}" class="img-fluid" alt="{% static 'assets/img/about6.jpeg' %}">
+                  </div>
+                  <div class="col-lg-12 mt-5">
+                    <img src="{% static 'assets/img/about3.jpeg' %}" class="img-fluid" height="49px" alt="{% static 'assets/img/about4.jpeg' %}">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-headset color-green flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-people color-pink flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{% static 'assets/img/features-bg.jpg' %}" alt=""></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <h3>Why US?</h3>
+            <p> If you are selling houses or renting your mortgage, we help you reach your clients faster by pushing your products to greater heights<br>
+            If you are looking for a place of residence, we refer you to one of the best houses in town easily, you just sit and we link you to your new home</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Seren Homes</a></h4>
+                <p>We advocate for better living by ensuring that we link you to only the best houses and residences possible</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Security</a></h4>
+                <p>Security is our priority as we ensure the location of your home is secure and your property is safe, live in peace</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Affordability</a></h4>
+                <p>We avoid exaggerated prices as we come into agreement between the owners and what the client wants, making sure all parties are satisfied</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Socal Welfare</a></h4>
+                <p>We also ensure that the location of your residence is close to sial amenities such as hospital, school etc making sure you are attended to on time </p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+
+
+
+{% endblock %}
+
+

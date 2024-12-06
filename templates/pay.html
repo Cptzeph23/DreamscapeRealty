@@ -1,0 +1,54 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+    <style>
+
+        input {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: #c5d3d3;
+            color: #050505;
+        }
+
+    </style>
+
+
+
+    <section>
+    <div class="d-flex justify-content-center text-bg-light">
+            <h1 class="text-primary mt-5 mb-5 text-cente text-primary fw-bolderr fs-14">Make Payment</h1>
+    </div>
+
+        <form class=" 123 col-lg-6 offset-lg-3 " method="post" action="{% url 'stk' %}">
+            <div class="row justify-content-center col-xs-4">
+            {% csrf_token %}
+            <label for="phone" class="text-primary text-center">Phone Number :</label>
+                 <input type="number"  style="width:300px" id="phone" name="phone" required placeholder="Phone Number">
+            <br><br>
+
+            <label for="amount" class="text-primary text-center">Amount :</label>
+                  <input type="text" id="amount" style="width:300px"  required name="amount" placeholder="Amount">
+               <br><br>
+
+                <div class="row text-center">
+                      <span class="input-group-btn">
+                            <button class="btn btn-success mt-3 mb-4 justify-content-center">Pay</button>
+                      </span>
+                </div>
+
+            </div>
+        </form>
+
+
+
+
+    </section>
+
+
+
+
+{% endblock %}

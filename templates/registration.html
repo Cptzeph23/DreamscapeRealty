@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <style>
+        .img {
+    image-resolution: 300dpi;
+
+
+        }
+    .cascading-right {
+      margin-right: -50px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+
+
+    </style>
+
+</head>
+
+<section class="text-center d-flex align-items-center justify-content-center w-100 bg-dark">
+
+
+<body>
+
+
+<!-- Section: Design Block -->
+
+
+  <!-- Jumbotron -->
+  <div class="container d-flex align-items-center justify-content-center rounded-4">
+    <div class="row g-0 align-items-center d-flex  justify-content-center rounded-4 ">
+      <div class="col-lg-6 mb-5 bg-secondary-subtle rounded-4 mb-lg-0">
+        <div class="card cascading-right bg-body-secondary rounded-4  shadow-4" style="
+            backdrop-filter: blur(30px);
+            ">
+          <div class="card-body p-5 rounded-4 bg-secondary shadow-4 shadow-5 text-center">
+            <h2 class="fw-bold mb-3 fw-bolder text-info">Create an Account</h2>
+            <form class="bg-light rounded-4 " method="POST">
+                {% csrf_token %}
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row rounded-4">
+                <div class="col-md-6 mb-4 rounded-4 ">
+                  <div data-mdb-input-init class="form-outline rounded-4 ">
+                      <label class="form-label  fw-bolder mt-3" for="form3Example1">Name</label>
+                    <input name="name" type="text" id="form3Example1" class="form-control p-2 " />
+
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 ">
+                  <div data-mdb-input-init class="form-outline ">
+                      <label class="form-label fw-bolder mt-3" for="form3Example2"></label>
+                    <input name="name" type="text" id="form3Example2" value="" [disabled]="true" class=" bg-light form-control" />
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4 ">
+                  <label class="form-label fw-bolder" for="form3Example3">Email</label>
+                <input name="email" type="email" id="form3Example3" class="form-control" />
+
+              </div>
+
+              <!-- Password input -->
+              <div data-mdb-input-init class="form-outline mb-4 ">
+                  <label class="form-label fw-bolder" for="form3Example4">Password</label>
+                <input name="Password" type="password" id="form3Example4" class="form-control" />
+
+              </div>
+
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-1">
+                <input class="form-check-input me-2" type="radio" value="" id="form2Example33" />
+                <label class="form-check-label" for="form2Example33">
+                  Agree to <a href="#">terms and conditions</a>
+                </label>
+                  <br><br>
+
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3 mt-1">
+                submit
+              </button>
+                <div>
+                      <p class="text-start mb-3 p-2">Already have an account? <a href="{% url 'login' %}">Login here</a> </p>
+                  </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuNi-tYIXmflQol_6EdGL6lTYNwvxWkPIhlQ&s" class="w-100 rounded-4 shadow-4"
+          alt="" />
+
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+
+
+
+</body>
+</html>

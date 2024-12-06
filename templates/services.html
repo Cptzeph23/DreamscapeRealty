@@ -1,0 +1,97 @@
+{% extends 'starter-page.html' %}
+{% load  static %}
+
+{% block body %}
+	 <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container">
+          <h1 class="text-center mt-5 mb-4"><b>Services</b></h1>
+             <p class="text-center mb-5 mt-3">Take a look at some of the services we offer at Dreamscape Realty</p>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-house-check"></i>
+              </div>
+              <a href="{% url 'properties' %}" class="stretched-link">
+                <h3>Property Management</h3>
+              </a>
+              <p>We oversee and manage your physical property ensuring conducive environment for human habitat</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-badge-ad"></i>
+              </div>
+             <a href="{% url 'marketing' %}" class="stretched-link">
+                <h3>Marketing and advertisement</h3>
+              </a>sWe market your product and boost it to world market in order to attract as many clients as possible</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-hand-thumbs-up"></i>
+              </div>
+              <a href="{% url 'marketing' %}" class="stretched-link">
+                <h3>Negotiation</h3>
+              </a>
+              <p>We come into terms between the buyer and the seller ensuring peace and satisfiability of both parties for peaceful transaction and exchange of documents</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-list-check "></i>
+              </div>
+              <a href="{% url 'negotiation' %}" class="stretched-link">
+                <h3>Listings</h3>
+              </a>
+              <p>We list properties on the website to help searchers locate their desired homes faster</p>
+              <a href="{% url 'listing' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <a href="{% url 'listing' %}" class="stretched-link">
+                <h3>Transaction management</h3>
+              </a>
+              <p>We manage all preliminary transactions to ensure smooth refund in case client is not satisfied with the product thus curbing fraud</p>
+              <a href="{% url 'transaction' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-currency-exchange"></i>
+              </div>
+              <a href="{% url 'transaction' %}" class="stretched-link">
+                <h3>Property Valuation</h3>
+              </a>
+              <p>We inspect and value your property to avoid under valuation or over valuation</p>
+              <a href="{% url 'valuation' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+
+
+{% endblock %}

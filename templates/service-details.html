@@ -1,0 +1,74 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+
+      <div class="container">
+           <div class="mb-5">
+            <h1 class="text-center mt-5 mb-5"><b>Service Details</b></h1>
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="service-box bg-dark">
+              <h4 class="text-primary text-center">Service List</h4>
+              <div class="services-list">
+                <a href="{% url 'hunting' %}" class="active"><i class="bi bi-arrow-right-circle bg-success"></i><span>House Hunting</span></a>
+                <a href="{% url 'marketing' %}"><i class="bi bi-arrow-right-circle bg-success"></i><span>Advertisement</span></a>
+                <a href="{% url 'properties' %}"><i class="bi bi-arrow-right-circle bg-success"></i><span>Real Estate management</span></a>
+                <a href="{% url 'negotiation' %}"><i class="bi bi-arrow-right-circle bg-success"></i><span>Buyer-Client agreement</span></a>
+                <a href="{% url 'marketing' %}"><i class="bi bi-arrow-right-circle bg-success"></i><span>Marketing</span></a>
+              </div>
+            </div><!-- End Services List -->
+
+            <div class="service-box">
+              <h4>Download Catalog</h4>
+              <div class="download-catalog">
+                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
+                <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+              </div>
+            </div><!-- End Services List -->
+
+            <div class="help-box d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-headset help-icon"></i>
+              <h4>Have a Question?</h4>
+              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+254703297902</span></p>
+              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:askzeph20@gmail.com">askzeph20@gmail.com</a></p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/services.jpg' %}" alt="" class="img-fluid services-img">
+            <h3>What we offer</h3>
+            <p>
+             We offer a full-package experience as we bring you all you need to start living in your new homestead as well as help you attract clients in the case you are offering accommodation services
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>On point advertisement and marketing</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Buyer client agreement</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Realtime service delivery</span></li>
+            </ul>
+            <p>
+              We help you attract worldclass clients by boosting your products to various platforms making sure you it reaches a wide market of clients
+            </p>
+            <p>
+              We validate and verify agent details and ensure integrity as we connect you to various agents offering houses for rent and sale.<br>
+                We follow up every detail and transaction until you settle and sign all relevant documents to ensure your satisfaction
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+
+
+{% endblock %}

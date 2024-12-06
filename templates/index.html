@@ -1,0 +1,337 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+     <!-- Hero Section -->
+    <section  id="hero" class="hero section dark-background ">
+
+      <div id="hero-carousel" class="carousel slide fw-bolder fs-18 text-info" data-bs-ride="carousel" data-bs-interval="3000">
+
+        <div class="carousel-item fw-bolder fs-16 active">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+          <div class="carousel-container">
+            <div>
+              <p class=" fw-bolder fs-16">Ngong, Kajiado</p>
+              <h2><span class="text-success">204</span> Ngong Road</h2>
+              <a href="{% url 'singleProperty' %}" class="btn-get-started fw-bolder text-info">rent | Ksh. 60,000</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-2.jpg' %}" alt="">
+          <div class="carousel-container">
+            <div>
+              <p>Thika </p>
+              <h2><span class="text-success">2300</span> Thika</h2>
+              <a href="{% url 'singleProperty' %}" class="btn-get-started  fw-bolder text-info">sale | Ksh. 2.8M</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-3.jpg' %}" alt="">
+          <div class="carousel-container">
+            <div>
+              <p>Elgon View</p>
+              <h2><span class="text-success">30100</span> Eldoret</h2>
+              <a href="{% url 'singleProperty' %}" class="btn-get-started  fw-bolder text-info">rent | Ksh. 80,000</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+     <!-- Real Estate Section -->
+    <section id="real-estate" class="real-estate section">
+        <div class="text-center  mt-3 mb-3">
+                  <h1 class="text-center mb-4 mt-1">Properties</h1>
+                  <p class="mb-5">Take a look at some of the best houses and apartments we have on display both for sale and rent.</p>
+
+              </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-1.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Ksh.85,000</span>
+                <h3><a href="{% url 'singleProperty' %}" class="stretched-link">Karen Hardy</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col">250m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-2.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Ksh.4.7M</span>
+                <h3><a href="{% url 'singleProperty' %}" class="stretched-link">Kilimani Nairobi</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col">450m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">3</div>
+                    <div class="col">2</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-3.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Ksh.6.5M</span>
+                <h3><a href="{% url 'singleProperty' %}" class="stretched-link">Westlands</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col">500m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">3</div>
+                    <div class="col">2</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-4.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Ksh.120,000</span>
+                <h3><a href="{% url 'singleProperty' %}" class="stretched-link">Runda</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">150m<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-5.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Ksh.60,000</span>
+                <h3><a href="{% url 'singleProperty' %}" class="stretched-link">Kitsuru</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">180<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-6.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Ksh.4.0M</span>
+                <h3><a href="{% url 'singleProperty' %}" class="stretched-link">Kitengela</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col">500<sup>2</sup></div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Real Estate Section -->
+
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Views of some of our loyal clients and their experiences </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 500
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper" >
+
+            <div class="swiper-slide">
+              <div class="testimonial-item "style="width: 200px; height: 20%;">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                 Hi, Dreamscape Realty was the platform I used to secure a house
+                    at one of the best homesteads in town. Their agents are trustworthy and they offer realtime assistance
+                    making sure you get your desired home.
+
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimonials/testimonial1jpg' %}" class="testimonial-img" alt="">
+                  <h3>Purity Shee</h3>
+                  <h4>Beneficiary</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+               <div class="testimonial-item "style="width: 200px; height: 20%;">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                 "Comprehensive real estate site featuring detailed property descriptions and photos.<br>
+                    Great for buyers and renters alike. Customer support is responsive,<br>
+                    ensuring a smooth experience throughout the process. Truly dependable!"
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/aget1.jpeg' %}" class="testimonial-img" alt="">
+                  <h3>Ole Sapit</h3>
+                  <h4>Beneficiary</h4>
+                </div>
+              </div>
+
+
+               <div class="testimonial-item "style="width: 200px; height: 15%;">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                 "An intuitive platform with accurate property listings and seamless navigation.
+                    Offers helpful filters for location and price.
+                    The user interface makes house-hunting efficient and enjoyable.
+                    Highly recommended for home seekers!"
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimo1.jpeg' %}" class="testimonial-img" alt="">
+                  <h3>Steve Okefe</h3>
+                  <h4>Beneficiary</h4>
+                </div>
+              </div>
+
+
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+    </section>
+
+
+
+
+
+{% endblock %}
