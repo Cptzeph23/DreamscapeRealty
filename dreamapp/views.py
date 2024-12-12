@@ -23,7 +23,7 @@ def index(request):
 
 
 def about(request):
-     render(request, 'about.html')
+   return  render(request, 'about.html')
 
 def agents(request):
     return render(request, 'agents.html')
@@ -80,7 +80,7 @@ def login(request):
 def registration(request):
     if request.method == 'POST':
         users = NewUser(
-            name = request.POST['name'],
+            fname = request.POST['name'],
             email = request.POST['email'],
             password = request.POST['Password'],
 

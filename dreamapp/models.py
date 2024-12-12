@@ -20,12 +20,12 @@ class Member(models.Model):
 
 
 class NewUser(models.Model):
-    name = models.CharField(max_length=20)
+    fname = models.CharField(max_length=20)
     email = models.EmailField()
     password = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.name
+        return self.fname
 
 class Payment(models.Model):
     number = models.CharField(max_length=20)
