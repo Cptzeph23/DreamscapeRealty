@@ -5,7 +5,7 @@ from dreamapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
+    path('', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('agents/', views.agents, name='agents'),
     path('contact/', views.contact, name='contact'),

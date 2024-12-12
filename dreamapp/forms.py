@@ -1,5 +1,5 @@
 from django import forms
-from dreamapp.models import Message, Member, NewUser, Payment
+from dreamapp.models import Message, Member, NewUser, Payment, Rating
 
 
 class LoginForm(forms.ModelForm):
@@ -16,4 +16,9 @@ class RegistrationForm(forms.ModelForm):
 class PaymentForm(forms.ModelForm):
     class Meta:
         model = Payment
+        fields = '__all__'
+
+class RatingForm(forms.ModelForm):
+    class Meta:
+        model = Rating
         fields = '__all__'

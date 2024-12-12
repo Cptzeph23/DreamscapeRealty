@@ -34,6 +34,11 @@ class Payment(models.Model):
     def __str__(self):
         return self.amount
 
+class Rating(models.Model):
+    textarea = models.TextField(max_length=500)
+
+    def __str__(self):
+        return self.textarea
 
 
 
