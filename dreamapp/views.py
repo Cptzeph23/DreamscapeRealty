@@ -77,6 +77,9 @@ def valuation(request):
 def login(request):
     return render(request, 'login.html')
 
+#def newproperty(request):
+    #return render(request, 'newproperty.html')
+
 def registration(request):
     if request.method == 'POST':
         users = NewUser(

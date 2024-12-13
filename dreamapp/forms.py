@@ -1,5 +1,5 @@
 from django import forms
-from dreamapp.models import Message, Member, NewUser, Payment, Rating
+from dreamapp.models import Message, Member, NewUser, Payment, Rating, NewProperty
 
 
 class LoginForm(forms.ModelForm):
@@ -22,3 +22,18 @@ class RatingForm(forms.ModelForm):
     class Meta:
         model = Rating
         fields = '__all__'
+
+""""
+class NewPropertyForm(forms.ModelForm):
+    class Meta:
+        model = NewProperty
+        fields = [
+            'title',
+            'price',
+            'number_of_beds',
+            'bathrooms',
+            'garages',
+            'location',
+            'image'
+        ]
+"""

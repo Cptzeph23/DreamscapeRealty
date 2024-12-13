@@ -28,6 +28,7 @@ urlpatterns = [
     path('westlands/', views.westlands, name='westlands'),
     path('runda/', views.runda, name='runda'),
     path('pay/', views.pay, name='pay'),
+    #path('newproperty/', views.newproperty, name='newproperty'),
 
     path('pay/', views.pay, name='pay'),
     path('stk/', views.stk, name='stk'),
