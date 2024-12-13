@@ -20,13 +20,13 @@
 
     <section>
     <div class="d-flex justify-content-center text-bg-light">
-            <h1 class="text-primary mt-5 mb-5 text-cente text-primary fw-bolderr fs-14">Make Payment</h1>
+            <h1 class="text-primary mt-5 mb-5 text-cente text-primary fw-bolderr fs-14">Lipa na Mpesa</h1>
     </div>
 
         <form class=" 123 col-lg-6 offset-lg-3 " method="post" action="{% url 'stk' %}">
             <div class="row justify-content-center col-xs-4">
             {% csrf_token %}
-            <label for="phone" class="text-primary text-center">Phone Number :</label>
+            <label for="phone" class="text-primary text-center"> Mpesa Number :</label>
                  <input type="number"  style="width:300px" id="phone" name="phone" required placeholder="Phone Number">
             <br><br>
 

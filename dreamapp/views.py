@@ -6,6 +6,13 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from pip._vendor.requests.auth import HTTPBasicAuth
 from dreamapp.models import Message,NewUser
+import requests
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from requests.auth import HTTPBasicAuth
+
+import urllib.request
+import urllib.parse
 
 # Create your views here.
 def index(request):
@@ -163,9 +170,8 @@ def stk(request):
             "PartyB": LipanaMpesaPpassword.Business_short_code,
             "PhoneNumber": phone,
             "CallBackURL": "https://sandbox.safaricom.co.ke/mpesa/",
-            "AccountReference": "eMobilis",
+            "AccountReference": "Glory",
             "TransactionDesc": "Web Development Charges"
         }
         response = requests.post(api_url, json=request, headers=headers)
-        return HttpResponse("Success! Complete payment prompt on your phone")
-
+        return HttpResponse("success! Follow the prompt to complete your payment")
