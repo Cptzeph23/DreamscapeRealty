@@ -90,7 +90,7 @@ def login(request):
 def registration(request):
     if request.method == 'POST':
         users = NewUser(
-            fname = request.POST['name'],
+            name = request.POST['name'],
             email = request.POST['email'],
             password = request.POST['Password'],
 
