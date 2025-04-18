@@ -12,7 +12,6 @@
   <!-- Favicons -->
   <link href="{% static 'assets/img/fav12.png' %}" rel="icon">
 
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -28,49 +27,182 @@
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
+  <style>
+    .search-bar {
+      width: 150px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 6px 10px;
+      border-radius: 15px;
+      border: 1px solid #01ff48;
+      background-color: #082477;
+      color: #ffffff;
+    }
+    .autocomplete-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      z-index: 1000;
+      max-height: 200px;
+      overflow-y: auto;
+      border-radius: 10px;
+    }
+    .autocomplete-results div {
+      padding: 5px;
+      cursor: pointer;
+      color: black;
+    }
+    .autocomplete-results div:hover {
+      background-color: #f0f0f0;
+    }
+    .logo h1.sitename {
+      font-size: 1.25rem;
+      white-space: nowrap;
+      margin-right: 1rem;
+    }
+    @media (max-width: 768px) {
+      .logo h1.sitename {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="starter-page-page">
 
-  <header id="header" class="header bg-dark d-flex align-items-center  fixed-top">
-    <div class="container-fluid container-xl text-bg-dark position-static  d-flex align-items-center justify-content-between">
+  <header id="header" class="header bg-dark d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl text-bg-dark d-flex align-items-center justify-content-between">
 
-      <a href="{% url 'index' %}" class="logo d-flex align-items-start">
+      <div class="logo d-flex align-items-center">
+        <a href="{% url 'index' %}" class="me-3">
+          <h1 class="sitename fw-bold text-primary mb-0">Dreamscape Realty</h1>
+        </a>
+      </div>
 
-        <h1 class="sitename fs-10 fw-bold text-start text-primary ">Dreamscape Realty</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu fw-bolder">
-        <ul class="d-flex align-items-center">
+      <nav id="navmenu" class="navmenu fw-bolder d-flex align-items-center w-100 justify-content-end">
+        <ul class="d-flex align-items-center mb-0">
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
           <li class="dropdown"><a href="{% url 'servicedetails' %}"><span>Service-Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li class="text-primary bg-dark"><a href="{% url 'hunting' %}">House Hunting</a></li>
-              <li class="dropdown  bg-dark"><a href="#"><span>Real Estate Management</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown bg-dark"><a href="#"><span>Real Estate Management</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li class="text-primary bg-dark"><a href="{% url 'listing' %}">Listing</a></li>
                   <li class="text-primary bg-dark"><a href="{% url 'valuation' %}">Property Valuation</a></li>
                   <li class="text-primary bg-dark"><a href="{% url 'transaction' %}">Transaction Management</a></li>
-
                 </ul>
               </li>
               <li class="text-primary bg-dark"><a href="{% url 'marketing' %}">Marketing</a></li>
               <li class="text-primary bg-dark"><a href="{% url 'negotiation' %}">Negotiation</a></li>
-
             </ul>
           </li>
           <li class="text-primary"><a href="{% url 'properties' %}">Properties</a></li>
           <li class="text-primary"><a href="{% url 'agents' %}">Agents</a></li>
           <li class="text-primary"><a href="{% url 'contact' %}">Contact</a></li>
-
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
 
+        <div class="search-bar ms-3">
+          <input type="text" id="search-input" class="search-input" placeholder="Search...">
+          <div id="autocomplete-results" class="autocomplete-results"></div>
+        </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list ms-3"></i>
+      </nav>
     </div>
   </header>
+
+  <script>
+    const suggestions = [
+      "House Hunting",
+      "Property Valuation",
+      "Transaction Management",
+      "Listing",
+      "Marketing",
+      "Negotiation",
+      "Contact",
+      "Agents",
+      "Services",
+      "About",
+      "Kitsuru",
+      "Karen Hardy",
+      "Kilimani Nairobi",
+      "Westlands",
+      "Runda",
+      "Kitengela"
+    ];
+
+    const input = document.getElementById("search-input");
+    const resultsBox = document.getElementById("autocomplete-results");
+
+    input.addEventListener("input", function () {
+      const value = this.value.toLowerCase();
+      resultsBox.innerHTML = "";
+
+      if (value === "") return;
+
+      const matches = suggestions.filter(s => s.toLowerCase().includes(value));
+
+      matches.forEach(match => {
+        const div = document.createElement("div");
+        div.textContent = match;
+        div.addEventListener("click", () => {
+          input.value = match;
+          resultsBox.innerHTML = "";
+          redirectTo(match);
+        });
+        resultsBox.appendChild(div);
+      });
+    });
+
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const value = input.value.toLowerCase();
+        const found = suggestions.find(s => s.toLowerCase() === value);
+        if (found) {
+          redirectTo(found);
+        } else {
+          alert("No result found");
+        }
+      }
+    });
+
+    function redirectTo(term) {
+      switch (term.toLowerCase()) {
+        case "house hunting": window.location.href = "{% url 'hunting' %}"; break;
+        case "property valuation": window.location.href = "{% url 'valuation' %}"; break;
+        case "transaction management": window.location.href = "{% url 'transaction' %}"; break;
+        case "listing": window.location.href = "{% url 'listing' %}"; break;
+        case "marketing": window.location.href = "{% url 'marketing' %}"; break;
+        case "negotiation": window.location.href = "{% url 'negotiation' %}"; break;
+        case "contact": window.location.href = "{% url 'contact' %}"; break;
+        case "agents": window.location.href = "{% url 'agents' %}"; break;
+        case "services": window.location.href = "{% url 'services' %}"; break;
+        case "about": window.location.href = "{% url 'about' %}"; break;
+        case "kitsuru": window.location.href = "{% url 'kitsuru' %}"; break;
+        case "karen hardy": window.location.href = "{% url 'karenHardy' %}"; break;
+        case "kilimani nairobi": window.location.href = "{% url 'kilimani' %}"; break;
+        case "westlands": window.location.href = "{% url 'westlands' %}"; break;
+        case "runda": window.location.href = "{% url 'runda' %}"; break;
+        case "kitengela": window.location.href = "{% url 'kitengela' %}"; break;
+        default: alert("No URL mapped for this item"); break;
+      }
+    }
+
+    document.addEventListener("click", (e) => {
+      if (!input.contains(e.target) && !resultsBox.contains(e.target)) {
+        resultsBox.innerHTML = "";
+      }
+    });
+  </script>
+</body>
+</html>
 
   <main class="main">
       
