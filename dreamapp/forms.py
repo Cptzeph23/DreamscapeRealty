@@ -23,6 +23,13 @@ class RatingForm(forms.ModelForm):
         model = Rating
         fields = '__all__'
 
+
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+
 """"
 class NewPropertyForm(forms.ModelForm):
     class Meta:

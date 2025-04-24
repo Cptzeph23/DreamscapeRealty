@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
+      <!-- Favicons -->
+  <link href="{% static 'assets/img/fav12.png' %}" rel="icon">
+
     <style>
         .img {
     image-resolution: 300dpi;
@@ -32,7 +35,7 @@
 
 </head>
 
-<section class="text-center d-flex align-items-center justify-content-center w-100 bg-dark">
+<section class="text-center d-flex align-items-center justify-content-center bg-dark">
 
 
 <body>
@@ -76,9 +79,9 @@
 
               <!-- Checkbox -->
               <div class="form-check d-flex align-content-start justify-content-center mb-1">
-                <input class="form-check-input ms-2 me-1" type="radio" value="" id="form2Example33" />
-                <label class="form-check-label" for="form2Example33">
-                  Agree to <a href="">terms and conditions</a>
+                <input class="form-check-input ms-2 me-1" type="radio" value="" id="form2Example33" required/>
+                <label  class="form-check-label" for="form2Example33">
+                  Agree to <a href= "{% static 'documents/Terms and Conditions.pdf' %}" target="_blank" >terms and conditions</a>
                 </label>
                   <br><br>
 

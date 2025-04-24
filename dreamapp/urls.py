@@ -33,6 +33,10 @@ urlpatterns = [
     path('pay/', views.pay, name='pay'),
     path('stk/', views.stk, name='stk'),
     path('token/', views.token, name='token'),
+    path('registration/', views.registration, name='create_account'),
+    path('otp/', views.otp, name='otp'),
+    path('login/', views.login, name='login'),
+   # path('predict/', views.predict_fraud, name='predict_fraud'),
 
 
 

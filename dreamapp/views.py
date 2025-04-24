@@ -10,11 +10,22 @@ import requests
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from requests.auth import HTTPBasicAuth
+import random
+from django.core.mail import send_mail
+from django.utils import timezone
+from django.contrib import messages
+from django.contrib.auth.hashers import make_password
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.hashers import check_password
+from .models import NewUser
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
 
 import urllib.request
 import urllib.parse
 
-# Create your views here.
+
 def index(request):
     if request.method == 'POST':
         if NewUser.objects.filter(
@@ -23,9 +34,13 @@ def index(request):
         ).exists():
             return render(request, 'index.html')
         else:
-            return render(request, 'login.html')
+            print('Invalid credentials')
+            return render(request, 'login.html', {'error': 'Invalid credentials'})
     else:
-        return render(request, 'login.html')
+        if 'email' in request.session:
+            return render(request, 'index.html')
+        else:
+            return render(request, 'login.html')
 
 
 
@@ -102,6 +117,35 @@ def registration(request):
         return render(request, 'registration.html')
 
 
+# email verification via OTP
+def send_otp(email):
+    otp = str(random.randint(100000, 999999))
+    send_mail(
+        subject='Dreamscape Realty - Email Verification OTP',
+        message=f'Your verification code is: {otp}',
+        from_email='noreply@dreamscape.com',
+        recipient_list=[email],
+    )
+    return otp
+
+def otp(request):
+    if request.method == 'POST':
+        email = request.session.get('email')
+        otp_input = request.POST['otp']
+        user = get_object_or_404(NewUser, email=email)
+
+        if user.otp == otp_input:
+            user.is_verified = True
+            user.otp = None
+            user.save()
+            messages.success(request, 'Email verified! Please log in.')
+            return redirect('login')
+        else:
+            messages.error(request, 'Invalid OTP. Try again.')
+
+    return render(request, 'otp.html')
+
+
 
 def runda(request):
     return render(request, 'runda.html')
@@ -170,8 +214,10 @@ def stk(request):
             "PartyB": LipanaMpesaPpassword.Business_short_code,
             "PhoneNumber": phone,
             "CallBackURL": "https://sandbox.safaricom.co.ke/mpesa/",
-            "AccountReference": "Glory",
-            "TransactionDesc": "Web Development Charges"
+            "AccountReference": "Dreamscape Realty",
+            "TransactionDesc": "Payment for Property Booking"
         }
         response = requests.post(api_url, json=request, headers=headers)
         return HttpResponse("success! Follow the prompt to complete your payment")
+
+

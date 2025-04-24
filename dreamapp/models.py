@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 class Message(models.Model):
@@ -22,10 +23,16 @@ class Member(models.Model):
 class NewUser(models.Model):
     name = models.CharField(max_length=20)
     email = models.EmailField()
-    password = models.CharField(max_length=20)
+    password = models.CharField(max_length=128)
+
+
+    # password hashing
+   ##  if not self.password.startswith('pbkdf2_'):
+         #super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.name
+      return self.name
+
 
 class Payment(models.Model):
     number = models.CharField(max_length=20)
