@@ -1,0 +1,7 @@
+<form method="POST">
+  {% csrf_token %}
+  <input name="amount" placeholder="Amount" required>
+  <input name="location" placeholder="Location Code" required>
+  <input name="user_age" placeholder="User Age" required>
+  <button type="submit">Predict</button>
+</form>

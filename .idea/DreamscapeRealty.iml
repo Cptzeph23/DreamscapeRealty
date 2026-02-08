@@ -17,7 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/dream" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (DreamscapeRealty)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.14 (3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
